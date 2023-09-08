@@ -1,0 +1,152 @@
+body {
+    font: 20px arial, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+    overflow-x: hidden;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  p {font-size: 20px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #360568; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #401484; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #5B2A86; /* White */
+    color: #ffffff;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+
+  #logo-header {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  #hero-text {
+    margin-top: 10px;
+  }
+
+  .container-fluid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .navbar {
+    background-color: #231F20;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+  }
+  .navbar-nav  li a:hover {
+    color: blue !important;
+  }
+
+  .spacer {
+    aspect-ratio: 950/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('/static/assets/layer1.svg');
+}
+
+.layer2 {
+  background-image: url('/static/assets/layer2.svg');
+}
+
+.layer3 {
+  background-image: url('/static/assets/layer3.svg');
+}
+
+.layer4 {
+  background-image: url('/static/assets/layer4.svg');
+}
+
+.feature-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.feature-card {
+  color: white;
+  background-color: #2b0045;
+  border-radius: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 500px;
+  height: 400px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.feature-card:last-child {
+  margin-right: 0; /* Remove margin from the last card to prevent extra space */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+.feature-icon {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+.feature-title {
+  font-weight: bolder;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.feature-description {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-card {
+    width: 100%;
+  }
+}
+
+.todo-list {
+  margin: 70px;
+}
+
+.todo-content img {
+  max-width: 50px; /* Adjust the image size */
+  margin-right: 10px;
+}
+
+.todo-content p {
+  margin: 0;
+}
+
+.todo-container {
+  display: flex;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+#braini {
+  margin-left: 70px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Study BrAIn - Enhance Your Knowledge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">STUDYBRAIN</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#more">Getting Started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<section class="container-fluid bg-1 text-center">
+  <h1 id="logo-header">Welcome, I am Study BrAIn!</h1>
+  <img src="{{url_for('static', filename='assets/brainGPT.png')}}" class="img-responsive img-circle m    argin" style="display:inline" alt="Bird" width="350" height="350">
+  <p id="hero-text">Your Personal AI Study Enhancer.</p>
+  <a <a href="{{ url_for('chat_page') }}" class="btn btn-primary btn-lg">Start Chatting!</a>
+</a>
+</section>
+
+<div class="spacer layer1"></div>
+
+<!-- Second Container -->
+<section id="about" class="container-fluid bg-2 text-center">
+  <h3 class="margin">About</h3>
+  <p>This is an AI Chatbot Web Application that has been made in the Context of Software Engineering for AI (SE4AI) at the University of Leipzig. Group Members are Yannik Dannies, Fabian Stoehr, Ferdinand Lange and Kevin Kunkel. We are four CS-Students who enjoy building Applications and tinkering around with new Frameworks and Technologies. Study Brain is a Personal Tutor who provide answers to questions for selected lectures.</p>
+</section>
+
+<div class="spacer layer2"></div>
+
+<!-- Third Container (Grid) -->
+
+<section id="features" class="container-fluid bg-3 text-center">
+  <h3 class="margin">Features</h3>
+  <div class="feature-container">
+    <div class="feature-card">
+      <div class="feature-title">PDF Support</div>
+      <div class="feature-icon">
+        <i class="fas fa-file-pdf"></i>
+      </div>
+      <div class="feature-description">Upload your own lecture slides to the chatbot to ask questions specifically about its content. We will scrape data that fits to the lecture slides topics.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Chat Performance</div>
+      <div class="feature-icon">
+        <i class="fab fa-rocketchat"></i>
+      </div>
+      <div class="feature-description">Enjoy fast and reliable response times. Don't wait with starting your first conversation!</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Big Data</div>
+      <div class="feature-icon">
+        <i class="fas fa-database"></i>
+      </div>
+      <div class="feature-description">STUDY BRAIN supports a huge data lake from either being feed with the GPT API or dynamically webscraping medium articles.</div>
+    </div>
+</section>
+
+<div class="spacer layer3"></div>
+
+<section id="more" class="container-fluid bg-1 text-center">
+  <h3 class="margin">Getting Started</h3>
+  <div class="todo-container">
+    <div class="todo-list">
+      <p><i class="fas fa-check-circle fa-lg"></i> Step 1: Upload your Lectures Slides on to Study BrAIn.</p>
+      <p><i class="fas fa-check-circle fa-lg"></i> Step 2: Write a Question Prompt that relates to your Lecture Slides and wait for the Answer.</p>
+      <p><i class="fas fa-check-circle fa-lg"></i> Step 3: Continue and Develope your Conversation with Study BrAIn.</p>
+      <p><i class="fas fa-check-circle fa-lg"></i> Step 4: (Optional): Send us your Feedback on your Conversation!</p>
+    </div>
+    <img id="braini" src="{{url_for('static', filename='assets/braini.png')}}" class="img-responsive img-circle m    argin" style="display:inline" alt="Bird" width="370px">
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Universität Leipzig</a></p> 
+</footer>
+
+</body>
+<script>
+    // Smooth scroll for navigation links
+    $(document).ready(function () {
+    $("a").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800, // Adjust the scroll duration (milliseconds) as needed
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+  });
+</script>
+</html>

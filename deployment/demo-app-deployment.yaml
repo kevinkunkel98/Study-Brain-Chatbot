@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: group-5-deployment
+  namespace: group-5-chatbot
+  labels:
+    app: group-5-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group-5-app
+  template:
+    metadata:
+      labels:
+        app: group-5-app
+    spec:
+      containers:
+      - name: chatbot
+        image: grimdumpling/group-5-chatbot:1.0 
+          #volumeMounts:
+          #- name: group-5-app-volume
+          # mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+
